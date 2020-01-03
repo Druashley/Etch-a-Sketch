@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+#gridContainer {
+    width: fit-content;
+    background-color: green;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex: 0 0 33.3%;
+}
+
+.box {
+    background-color: gray;
+    border: black solid 1px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
