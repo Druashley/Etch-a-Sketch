@@ -1,19 +1,25 @@
 h1 {
     text-align: center;
 }
+body{
+    text-align: center;
+}
 
 #gridContainer {
-    width: fit-content;
-    background-color: green;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex: 0 0 33.3%;
+    width: 320px;
+    height: 320px;
+    display: grid;
+    background-color: #2196F3;
+    padding: 1px;
+    justify-content: center;
+    max-height: 320px;
+    max-width: 320px;
 }
 
 .box {
-    background-color: gray;
-    border: black solid 1px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 1px;
+    font-size: 30px;
+    text-align: center;
 }
