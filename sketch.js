@@ -11,23 +11,31 @@ title = document.getElementById('title');
 
 titleColor = document.getElementById('titleColor');
 
+allButtons = document.getElementsByClassName('button');
+
+
 titleColor.addEventListener('click', function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
     for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
-    title.setAttribute('style', `color: ${color}`)
+    for (i = 0; i < allButtons.length; i++) {
+        allButtons[i].setAttribute('style', `background-color: ${color};`);
+    }
+    title.setAttribute('style', `color: ${color}; border-bottom: 3px ${color} solid`);
 });
 
 colorRestart.addEventListener('click', function (e) {
     let newBoxCount = prompt('How big would you like the grid?');
     if (newBoxCount > 0) {
         boxClear();
+        setColor(getRandomColor());
         randomBoxColorMaker(newBoxCount);
     } else {
         newBoxCount = prompt('Your number must be above 0');
         boxClear();
+        setColor(getRandomColor());
         randomBoxColorMaker(newBoxCount);
     }
 
@@ -38,10 +46,12 @@ restartButton.addEventListener('click', function (e) {
     let newBoxCount = prompt('How big would you like the grid?');
     if (newBoxCount > 0) {
         boxClear();
+        setColor(getRandomColor());
         boxMaker(newBoxCount);
     } else {
         newBoxCount = prompt('Your number must be above 0');
         boxClear();
+        setColor(getRandomColor());
         boxMaker(newBoxCount);
     }
 
@@ -69,9 +79,6 @@ function boxClear() {
     }
 }
 
-// boxMaker(30);
-
-
 
 function randomBoxColorMaker(boxCount) {
 
@@ -90,8 +97,6 @@ function randomBoxColorMaker(boxCount) {
 }
 
 
-
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -102,6 +107,14 @@ function getRandomColor() {
 }
 
 
+function setColor(color) {
+    for (i = 0; i < allButtons.length; i++) {
+        allButtons[i].setAttribute('style', `background-color: ${color};`);
+    }
+    title.setAttribute('style', `color: ${color}; border-bottom: 3px ${color} solid`);
+}
+
+setColor(getRandomColor());
 
 boxMaker(30);
 
