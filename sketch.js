@@ -118,6 +118,8 @@ setColor(getRandomColor());
 
 boxMaker(30);
 
+console.log(title)
+
 
 
 

@@ -3,8 +3,7 @@ h1 {
 }
 body{
     text-align: center;
-    background-color: grey;
-    
+    background-color: grey; 
 }
 
 #gridContainer {
@@ -19,6 +18,11 @@ body{
     background-image: url(paper.jpg);
 }
 
+#buttonContainer {
+    padding-top: 20px;
+}
+
+
 .box {
     background-color: transparent;
     border: 1px solid transparent;
@@ -29,16 +33,24 @@ body{
 
 #title {
     border-bottom: 3px black solid;border-bottom: 3px black solid;
+    font-family:  Times, serif;
 }
 
 
 button {
     background-color: #4CAF50; /* Green */
-    border: 2px solid black;
-    color: white;
-    padding: 15px 32px;
+    border: 3px solid black;
+    color: black;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition-duration: .5s;
+    font-family:  Times, serif;
   }
+
+button:hover{
+    text-decoration: underline overline;
+}
