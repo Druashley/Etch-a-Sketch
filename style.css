@@ -3,6 +3,8 @@ h1 {
 }
 body{
     text-align: center;
+    background-color: grey;
+    
 }
 
 #gridContainer {
